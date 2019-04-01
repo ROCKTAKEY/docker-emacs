@@ -1,0 +1,15 @@
+FROM ubuntu
+MAINTAINER ROCKTAKEY <rocktakey@gmail.com>
+
+RUN apt -y update                                                 && \
+    apt -y install software-properties-common                     && \
+    apt -y update                                                 && \
+    apt -y install emacs26                                        && \
+    mkdir ~/.emacs.d/                                             && \
+    touch ~/.emacs.d/init.el                                      && \
+    echo "(package-initialize)" >  ~/.emacs.d/init.el             && \
+    echo "(add-to-list"         >> ~/.emacs.d/init.el             && \
+    echo " 'package-archives"   >> ~/.emacs.d/init.el             && \
+    echo " '(\"melpa\" . \"https://melpa.milkbox.net/packages/\"))"  \
+    >> ~/.emacs.d/init.el                                         && \
+    echo "(define-key key-translation-map (kbd \"C-h\") (kbd \"DEL\"))"
