@@ -9,7 +9,7 @@ RUN apt -y update                                                 && \
     touch ~/.emacs.d/init.el                                      && \
     echo "(package-initialize)" >  ~/.emacs.d/init.el             && \
     echo "(add-to-list"         >> ~/.emacs.d/init.el             && \
-    echo " 'package-archives"  >> ~/.emacs.d/init.el              && \
+    echo " 'package-archives"   >> ~/.emacs.d/init.el             && \
     echo " '(\"melpa\" . \"https://melpa.milkbox.net/packages/\"))"  \
     >> ~/.emacs.d/init.el                                         && \
-    echo "(define-key key-translation-map (kbd "C-h") (kbd "DEL"))"
+    echo "(define-key key-translation-map (kbd \"C-h\") (kbd \"DEL\"))"
