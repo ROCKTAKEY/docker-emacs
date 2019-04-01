@@ -13,4 +13,5 @@ RUN apt -y update                                                 && \
     echo " 'package-archives"   >> ~/.emacs.d/init.el             && \
     echo " '(\"melpa\" . \"https://melpa.milkbox.net/packages/\"))"  \
     >> ~/.emacs.d/init.el                                         && \
-    echo "(define-key key-translation-map (kbd \"C-h\") (kbd \"DEL\"))"
+    echo "(define-key key-translation-map (kbd \"C-h\") (kbd \"DEL\"))" \
+    >> ~/.emacs.d/init.el
