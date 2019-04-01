@@ -3,6 +3,7 @@ MAINTAINER ROCKTAKEY <rocktakey@gmail.com>
 
 RUN apt -y update                                                 && \
     apt -y install software-properties-common                     && \
+    add-apt-repository -y ppa:kelleyk/emacs                       && \
     apt -y update                                                 && \
     apt -y install emacs26                                        && \
     mkdir ~/.emacs.d/                                             && \
