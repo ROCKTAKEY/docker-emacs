@@ -2,6 +2,7 @@ FROM ubuntu
 MAINTAINER ROCKTAKEY <rocktakey@gmail.com>
 
 RUN apt -y update                                                 && \
+    apt -y install git                                            && \
     apt -y install software-properties-common                     && \
     add-apt-repository -y ppa:kelleyk/emacs                       && \
     apt -y update                                                 && \
